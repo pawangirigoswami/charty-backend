@@ -20,6 +20,10 @@ app.use(express.urlencoded({extended:true}));
 app.use("/api",route)
 
 
+app.get('/', (req, res) => {
+  res.send('Hello World')
+})
+
 app.listen(port,()=>{
     console.log(`server is running at port number http://localhost:${port}`)
 })
